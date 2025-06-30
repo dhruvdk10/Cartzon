@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon.in</title>
+    <script src="https://kit.fontawesome.com/da1a8618a8.js" crossorigin="anonymous"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: white;
+      }
+
+      marquee {
+        background-color: #232f3eda;
+        color: black;
+        font-size: 14px;
+        height: 20px;
+        padding-top: 3px;
+        padding-bottom: 1px;
+        font-weight: normal;
+        display: block;
+        border: none;
+      }
+
+      nav.nav1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1b2b3e;
+        height: 60px;
+        padding: 0px 260px;
+      }
+
+      nav.nav2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #131a22;
+        height: 40px;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+      }
+
+      ul.top {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 0;
+        margin: 0;
+      }
+
+      ul.bottom {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 35px;
+        padding: 0;
+        margin: 0;
+      }
+
+      select {
+        background-color: #1b2b3e;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+      }
+
+      img.indian-icon {
+        width: 25px;
+        height: 25px;
+      }
+
+      img.logo,
+      .footer-logo img {
+        width: 210px;
+        height: 40px;
+        object-fit: cover;
+        padding-top: 5px;
+      }
+
+      i {
+        color: white;
+        font-size: 22px;
+        cursor: pointer;
+      }
+
+      .banner img {
+        width: 100%;
+        height: 1000px;
+        object-fit: cover;
+        margin: 0;
+        display: block;
+      }
+
+      h1 {
+        font-family: monospace;
+        margin-top: 30px;
+        text-align: center;
+        color: black;
+      }
+
+      h2 {
+        text-align: center;
+        margin-top: 80px;
+        margin-bottom: 100px;
+        font-size: 1.5rem;
+      }
+
+      .product-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding: 20px 20px;
+      }
+
+      .product-card {
+        background-color: whitesmoke;
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+        box-shadow: 0 0 10px rgba(133, 133, 133, 0.1);
+        margin-bottom: 20px;
+      }
+
+      .product-card img {
+        width: 100%;
+        height: 350px;
+        border-radius: 10px;
+        border: none;
+        object-fit: cover;
+      }
+
+      .product-card p {
+        font-size: 16px;
+        font-family: monospace;
+        color: black;
+        margin: 5px 0;
+      }
+
+      .product-card .brand {
+        font-size: 20px;
+        margin: 10px 0;
+      }
+
+      .product-card .stock-green {
+        color: rgb(12, 145, 17);
+      }
+
+      .product-card .stock-gray {
+        color: rgb(113, 113, 113);
+      }
+
+      .product-card .stock-red {
+        color: red;
+      }
+
+      .product-card .highlight-deal {
+        margin-top: 1px;
+        font-size: 12px;
+        padding: 2px 2px;
+        width: 100px;
+        height: 25px;
+        background-color: #C8102E;
+        color: white;
+        border: none;
+        border-radius: 6px;
+      }
+
+      .product-card .highlight-bestseller {
+        background-color: rgb(15, 155, 225);
+        color: white;
+        border-radius: 6px;
+        border: none;
+        margin-top: 2px;
+        font-size: 12px;
+        padding: 2px 2px;
+        width: 80px;
+        height: 25px;
+      }
+
+      .cart-button {
+        display: inline-block;
+        width: 100px;
+        height: 30px;
+        padding: 5px 0;
+        font-size: 13px;
+        font-family: sans-serif;
+        font-weight: 500;
+        text-align: center;
+        border: none;
+        border-radius: 40px;
+        cursor: pointer;
+        background-color: #FFD700;
+        margin-top: 10px;
+      }
+
+      footer {
+        background-color: #1b2b3e;
+        color: white;
+        padding-top: 20px;
+        text-align: center;
+        font-size: 13px;
+      }
+
+      table {
+        width: 100%;
+        padding: 40px 100px;
+        text-align: center;
+        border-collapse: collapse;
+      }
+
+      table th {
+        font-size: 16px;
+        padding-bottom: 15px;
+      }
+
+      table td {
+        font-size: 14px;
+        padding: 6px 0;
+        color: #ddd;
+      }
+
+      hr {
+        margin-top: 30px;
+        height: 1px;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .footer-logo {
+        margin: 5px 0 5px 0;
+      }
+
+      .footer-bottom {
+        background-color: #131a22;
+        padding: 20px 0;
+        font-size: 12px;
+        color: #aaa;
+      }
+
+      ul.social-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 10px;
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+      }
+
+      @media (max-width: 700px) {
+        nav.nav1 {
+          flex-direction: row;
+          flex-wrap: wrap;
+          height: 40px;
+          padding: 2px 10px;
+          justify-content: space-between;
+        }
+
+        ul.top {
+          flex-direction: row;
+          flex-wrap: nowrap;
+          gap: 6px;
+          font-size: 11px;
+        }
+
+        ul.top li {
+          flex-direction: row;
+          align-items: center;
+        }
+
+        i {
+          font-size: 14px !important;
+        }
+
+        select {
+          font-size: 10px;
+          width: 82px;
+
+        }
+
+        img.indian-icon {
+          width: 15px;
+          height: 15px;
+        }
+
+        img.logo,
+        .footer-logo img {
+          width: 80px;
+          height: 30px;
+        }
+
+
+        nav.nav2 {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          padding: 5px;
+          height: 50px;
+        }
+
+        ul.bottom {
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 15px;
+          font-size: 11px;
+          padding: 0;
+        }
+
+        .banner img {
+          height: 275px;
+          width: 100%;
+          object-fit: contain
+        }
+
+        .product-section {
+          gap: 10px;
+          padding: 5px 2px;
+        }
+
+        .product-card {
+          width: 330px;
+          height: 465px;
+        }
+
+        .product-card img {
+          width: 100%;
+          height: 250px;
+          border-radius: 10px;
+          border: none;
+          object-fit: cover;
+        }
+
+        .product-card p {
+          font-size: 13px;
+          font-family: monospace;
+          color: black;
+          margin: 4px 0;
+        }
+
+        h1 {
+          font-size: 1.2rem;
+        }
+
+        h2 {
+          font-size: 1rem;
+          margin-top: 40px;
+          margin-bottom: 60px;
+        }
+
+        table th,
+        table td {
+          font-size: 8px;
+          padding: 6px 5px;
+        }
+
+        hr {
+          margin-top: 20px;
+          height: 1px;
+          border: none;
+          background-color: rgba(255, 255, 255, 0.08);
+          margin-bottom: 0px;
+        }
+
+        .footer-bottom {
+          font-size: 10px;
+          padding: 10px 0;
+          margin-top: 0px;
+        }
+
+        ul.social-links {
+          gap: 10px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <header>
+      <marquee><a href="#">
+          The BIG Monsoon Offer is LIVE! Get upto 50%*OFF</a>
+      </marquee>
+
+      <nav class="nav1">
+        <ul class="top">
+          <li><a href="#"><i class="fa-solid fa-location-dot"></i></a></li>
+          <li>
+            <img class="indian-icon" src="https://cdn-icons-png.flaticon.com/128/9906/9906480.png" alt="India icon">
+          </li>
+          <li>
+            <select>
+              <option selected>EN - English</option>
+              <option>HI - हिंदी</option>
+              <option>TA - தமிழ்</option>
+              <option>TE - తెలుగు</option>
+              <option>MR - मराठी</option>
+              <option>BN - বাংলা</option>
+              <option>GU - ગુજરાતી</option>
+              <option>KN - ಕನ್ನಡ</option>
+              <option>ML - മലയാളം</option>
+              <option>PA - ਪੰਜਾਬੀ</option>
+            </select>
+          </li>
+        </ul>
+
+        <img class="logo" src="cartzon.png" alt="Logo">
+
+        <ul class="top">
+          <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+          <li><a href="#"><i class="fa-solid fa-gear"></i></a></li>
+          <li><a href="#"><i class="fa-solid fa-bell"></i></a></li>
+          <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+          <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+        </ul>
+      </nav>
+
+      <nav class="nav2">
+        <ul class="bottom">
+          <li><a href="#"><i class="fa-solid fa-bars"></i><b> All</b></a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Fashion</a></li>
+          <li><a href="#">Electronics</a></li>
+          <li><a href="#">Books</a></li>
+          <li><a href="#">Sports</a></li>
+          <li><a href="#">Jewellery</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Furniture</a></li>
+          <li><a href="#">Footwear</a></li>
+          <li><a href="#">Grocery</a></li>
+          <li><a href="#">Stationery</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="banner">
+      <img src="banner.png" alt="banner">
+    </div>
+    <h1>Featured Products</h1>
+
+    <div class="product-section">
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1651013691313-81b822df0044?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Shoe image">
+        <p class="brand"><b>Adidas</b></p>
+        <p>Men's Lace Up Sneaker Shoes |<br> Casual Wear </p>
+        <p>⭐⭐⭐⭐⭐</p>
+        <p><b>₹1,299</b> M.R.P: <s>₹16,000</s>[57% off]</p>
+        <p class="stock-green">In Stock</p>
+        <p>Free Delivery</p>
+        <button class="cart-button">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://plus.unsplash.com/premium_photo-1718913936342-eaafff98834b?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="T-Shiirt image">
+        <p class="brand"><b>TravisMathew</b></p>
+        <p>Solid smokewhite T-Shirt for Men |<br>Casual wear </p>
+        <p>⭐⭐⭐</p>
+        <p><b>₹499</b> M.R.P: <s>₹2,999</s>[85% off]</p>
+        <p class="stock-gray">Only few left in Stock</p>
+        <button class="highlight-deal">Limited time deal</button><br>
+        <button class="cart-button">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D" alt="Jeans image">
+        <p class="brand"><b>Ben Martin</b></p>
+        <p>Men's Mid Rise Denim Regular Fit Jeans</p>
+        <p>⭐⭐⭐⭐</p>
+        <p><b>₹748</b> M.R.P: <s>₹2,999</s>[75% off]</p>
+        <p class="stock-green">In Stock</p>
+        <button class="highlight-bestseller">#1 Bestseller</button><br>
+        <button class="cart-button">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1720534490358-bc2ad29d51d5?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmFzZWJhbGwlMjBjYXB8ZW58MHx8MHx8fDA%3D&ixlib=rb-4.1.0&q=60&w=3000" alt="Cap image">
+        <p class="brand"><b>New York Yankees</b></p>
+        <p>Polyester Perforated Blank Cap |<br> Unisex </p>
+        <p>⭐⭐⭐⭐⭐</p>
+        <p><b>₹12,450</b> M.R.P: <s>₹16,000</s>[22% off]</p>
+        <p class="stock-red">Out of Stock</p>
+        <p><b>500+ bought</b> in past month</p>
+        <button class="cart-button">Add to cart</button>
+      </div>
+
+    </div>
+
+    <h2>More Products Coming Soon!</h2>
+
+    <footer>
+      <table>
+        <tr>
+          <th>Get to Know Us</th>
+          <th>Sell on Cartzon</th>
+          <th>Customer Support</th>
+        </tr>
+        <tr>
+          <td><a href="#">About Cartzon</a></td>
+          <td><a href="#">Start Selling</a></td>
+          <td><a href="#">Your Account</a></td>
+        </tr>
+        <tr>
+          <td><a href="#">Careers</a></td>
+          <td><a href="#">Vendor Signup</a></td>
+          <td><a href="#">Track Your Order</a></td>
+        </tr>
+        <tr>
+          <td><a href="#">Media & Press</a></td>
+          <td><a href="#">Affiliate Program</a></td>
+          <td><a href="#">Returns & Refunds</a></td>
+        </tr>
+        <tr>
+          <td><a href="#">Cartzon Blog</a></td>
+          <td><a href="#">Promote Products</a></td>
+          <td><a href="#">Shipping Policy</a></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td><a href="#">Help Center</a></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td><a href="#">Advertise on Cartzon</a></td>
+        </tr>
+
+      </table>
+
+      <div style="text-align: center; font-family: Arial, sans-serif; margin-top: 30px;">
+        <h4>Our Largest Store At Your Fingertips</h4>
+        <div style="margin-top: 15px;">
+          <a href="#" target="_blank" style="margin: 5px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" style="height: 35px;">
+          </a>
+          <a href="https://www.apple.com/in/app-store/" target="_blank" style="margin: 5px;">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style="height: 35px;">
+          </a>
+        </div>
+      </div>
+
+
+      <hr>
+
+      <div class="footer-logo">
+        <img src="cartzon.png" alt="Amazon Logo" />
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          Conditions of Use & Sale&nbsp;&nbsp;|&nbsp;&nbsp;Privacy Notice&nbsp;&nbsp;|&nbsp;&nbsp;Interest-Based Ads<br>
+          © 2025 Cartzon.in. All rights reserved. Dhruv Kapoor
+        </p>
+        <p>Follow us on :</p>
+        <ul class="social-links">
+          <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+
+  </body>
+
+</html>
