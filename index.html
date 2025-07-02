@@ -47,6 +47,49 @@
         height: 40px;
       }
 
+      .nav2 .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .nav2 .dropdown-content {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 110%;
+        background-color: #232f3e;
+        min-width: 180px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        z-index: 100;
+        border-radius: 8px;
+        padding: 10px 0;
+      }
+
+      .nav2 .dropdown-content a {
+        color: black;
+        padding: 10px 20px;
+        background-color: whitesmoke;
+        text-decoration: none;
+        display: block;
+        transition: background 0.2s, color 0.2s, transform 0.2s;
+        border-radius: 0;
+      }
+
+      .nav2 .dropdown-content a:hover {
+        background: #bdbdbd;
+        color: #232323;
+        transform: scale(1.05);
+      }
+
+      .nav2 .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .nav2 .dropdown:hover>a {
+        color: #ffffff;
+        border-radius: 8px 8px 0 0;
+      }
+
       li {
         display: flex;
         align-items: center;
@@ -83,11 +126,12 @@
         text-decoration: none;
         color: white;
         cursor: pointer;
+        transition: transform 0.2s, background 0.2s, color 0.2s;
+        display: inline-block;
       }
 
-      a,
       a i {
-        transition: transform 0.2s, background 0.2s, color 0.2s;
+        transition: transform 0.2s, color 0.2s;
         display: inline-block;
       }
 
@@ -95,7 +139,7 @@
       a:hover i,
       a i:hover {
         transform: scale(1.05);
-        color:#cccccc;
+        color: #cdcdcd;
       }
 
       img.indian-icon {
@@ -249,18 +293,15 @@
         padding-bottom: 15px;
         text-align: center;
         color: white;
-        padding-left: 100px;
-        padding-right: 100px;
+        padding: 12px 40px;
         white-space: nowrap;
       }
 
       table td {
         font-size: 14px;
-        padding: 6px 0;
+        padding: 12px 40px;
         color: #ddd;
         text-align: center;
-        padding-left: 100px;
-        padding-right: 100px;
         white-space: nowrap;
       }
 
@@ -320,7 +361,6 @@
         select {
           font-size: 10px;
           width: 82px;
-
         }
 
         img.indian-icon {
@@ -333,7 +373,6 @@
           width: 100px;
           height: 35px;
         }
-
 
         nav.nav2 {
           flex-direction: row;
@@ -461,7 +500,41 @@
 
       <nav class="nav2">
         <ul class="bottom">
-          <li><a href="#"><i class="fa-solid fa-bars"></i><b> All</b></a></li>
+          <li class="dropdown">
+            <a href="#"><i class="fa-solid fa-bars"></i><b> All</b></a>
+            <div class="dropdown-content">
+              <a href="#">Mobiles & Accessories</a>
+              <a href="#">Computers & Laptops</a>
+              <a href="#">Home & Kitchen</a>
+              <a href="#">Beauty & Personal Care</a>
+              <a href="#">Toys & Games</a>
+              <a href="#">Automotive</a>
+              <a href="#">Health & Wellness</a>
+              <a href="#">Watches</a>
+              <a href="#">Gift Cards</a>
+              <a href="#">Men's Fashion</a>
+              <a href="#">Women's Fashion</a>
+              <a href="#">Kids & Baby</a>
+              <a href="#">Footwear</a>
+              <a href="#">Jewellery</a>
+              <a href="#">Bags & Luggage</a>
+              <a href="#">Sports & Fitness</a>
+              <a href="#">Books & Stationery</a>
+              <a href="#">Grocery & Gourmet</a>
+              <a href="#">Pet Supplies</a>
+              <a href="#">Furniture</a>
+              <a href="#">Lighting & Decor</a>
+              <a href="#">Musical Instruments</a>
+              <a href="#">Industrial & Scientific</a>
+              <a href="#">Office Supplies</a>
+              <a href="#">Travel & Outdoor</a>
+              <a href="#">Cameras & Accessories</a>
+              <a href="#">TV, Audio & Video</a>
+              <a href="#">Kitchen Appliances</a>
+              <a href="#">Garden & Outdoors</a>
+              <a href="#">Handmade</a>
+            </div>
+          </li>
           <li><a href="#">New Arrivals</a></li>
           <li><a href="#">Fashion</a></li>
           <li><a href="#">Electronics</a></li>
@@ -578,7 +651,6 @@
         </tr>
       </table>
 
-
       <div style="text-align: center; font-family: Arial, sans-serif; margin-top: 30px;">
         <h4>Our Largest Store At Your Fingertips</h4>
         <div style="margin-top: 15px;">
@@ -590,7 +662,6 @@
           </a>
         </div>
       </div>
-
 
       <hr>
 
