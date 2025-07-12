@@ -217,10 +217,12 @@
         font-weight: bold;
       }
 
-      .tabs div:hover{
+      .tabs ,active:hover{
         color: #007185;
-        background-color: whitesmoke;
+        border-bottom: 3px solid #1da1f2;
+        color: black;
         font-weight: bold;
+        cursor: pointer;
       }
         
 
@@ -259,7 +261,7 @@
         background-color: #1b2b3e;
         color: white;
         border: none;
-        width: 150px;
+        width: 130px;
         cursor: pointer;
         border-radius: 12px;
         font-size: 14px;
@@ -453,10 +455,6 @@
 
         .search-bar input {
           width: 150px;
-        }
-
-        .time-filter{
-          width: 130px;
         }
 
         .empty-message {
