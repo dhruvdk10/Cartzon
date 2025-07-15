@@ -664,18 +664,49 @@
       font-size: 12px;
     }
 
-    .cart-button {
-      font-size: 13px;
-    }
+   .subtotal {
+    font-size: 14px;      /* Slightly smaller text */
+    font-weight: bold;
+    text-align: center;   /* Center align for better readability on mobile */
+    margin-top: 20px;     /* Reduce spacing */
+  }
 
-    .subtotal {
-      font-size: 14px;
-    }
+  .cart-button {
+    display: block;               /* Full-width button for mobile */
+    width: 100%;                  /* Take full container width */
+    max-width: 280px;             /* Optional: Limit max width */
+    height: auto;                 /* Auto height for flexibility */
+    padding: 12px 0;              /* Adjust padding */
+    font-size: 14px;              /* Slightly smaller text */
+    font-family: sans-serif;
+    font-weight: 500;
+    text-align: center;
+    border: none;
+    border-radius: 30px;          /* Slightly smaller radius */
+    cursor: pointer;
+    background-color: #FFD700;
+    margin: 15px auto 0;          /* Center align button */
+  }
 
-    .shop-btn {
-      font-size: 14px;
-      padding: 8px 20px;
-    }
+  .shop {
+    text-align: center;
+    margin-top: 20px;             /* Reduce gap */
+    margin-bottom: 100px;         /* Avoid large empty space on mobile */
+  }
+
+  .shop-btn {
+    display: inline-block;
+    background-color: #1b2b3e;
+    color: white;
+    padding: 10px 20px;           /* Reduce padding */
+    font-size: 14px;              /* Adjust text size */
+    border-radius: 20px;          /* Smaller radius */
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s;
+    min-width: 140px;
+    max-width: 220px;
+  }
+}
 
       a {
         text-decoration: none;
