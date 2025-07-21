@@ -34,29 +34,88 @@
         border: none;
       }
 
-      nav.nav1 {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+      .navbar {
         background-color: #1b2b3e;
-        height: 60px;
-        padding: 0px 260px;
-      }
-
-      nav.nav2 {
         display: flex;
         align-items: center;
-        justify-content: center;
-        background-color: #131a22;
-        height: 40px;
+        padding: 10px 20px;
+        color: white;
+        justify-content: space-between;
+        flex-wrap: wrap;
       }
 
-      .nav2 .dropdown {
+      .location {
+        color: #ccc;
+        font-size: 10px;
+        ;
+      }
+
+      .navbar .location,
+      .navbar .account,
+      .navbar .orders,
+      .navbar .cart {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .navbar .search-bar {
+        display: flex;
+        flex: 1;
+        margin: 0 15px;
+        max-width: 600px;
+      }
+
+      .navbar select {
+        padding: 2px;
+        width: 50px;
+        text-align: center;
+        background-color: #ccc;
+        border: none;
+        border-radius: 4px 0 0 4px;
+      }
+
+      .navbar input {
+        flex: 1;
+        padding: 10px;
+        background-color: whitesmoke;
+        border: none;
+        outline: none;
+      }
+
+      .navbar button {
+        background-color: rgb(15, 155, 225);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+      }
+
+      .amazon-navbar .icon {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+      }
+
+      .subnav {
+        background-color: #131a22;
+        padding: 10px 20px;
+        color: white;
+        font-size: 14px;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .subnav .dropdown {
         position: relative;
         display: inline-block;
       }
 
-      .nav2 .dropdown-content {
+      .subnav .dropdown-content {
         display: none;
         position: absolute;
         left: 0;
@@ -69,7 +128,7 @@
         padding: 10px 0;
       }
 
-      .nav2 .dropdown-content a {
+      .subnav .dropdown-content a {
         color: black;
         padding: 10px 20px;
         background-color: whitesmoke;
@@ -79,93 +138,75 @@
         border-radius: 0;
       }
 
-      .nav2 .dropdown-content a:hover {
+      .subnav .dropdown-content a:hover {
         background: #bdbdbd;
+        color: #232323;
         transform: scale(1);
       }
 
-      .nav2 .dropdown:hover .dropdown-content {
+      .subnav .dropdown:hover .dropdown-content {
         display: block;
       }
 
-      .nav2 .dropdown:hover>a {
+      .subnav .dropdown:hover>a {
         color: #ffffff;
         border-radius: 8px 8px 0 0;
       }
 
-
-      li {
-        display: flex;
-        align-items: center;
-      }
-
-      ul.top {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 15px;
-        padding: 0;
-        margin: 0;
-        font-size: 22px;
-      }
-
-      ul.bottom {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 35px;
-        padding: 0;
-        margin: 0;
-      }
-
-      select {
-        background-color: #1b2b3e;
+      .subnav a {
         color: white;
-        border: none;
-        cursor: pointer;
+        text-decoration: none;
+        transition: color 0.2s;
       }
 
-      select:focus {
-  outline: none;
-  box-shadow: none;
-}
+      .subnav a:hover {
+        color: #ddd;
+      }
 
       a {
         text-decoration: none;
         color: white;
         cursor: pointer;
         transition: transform 0.2s, background 0.2s, color 0.2s;
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        gap: 7px;
       }
 
       a i {
         transition: transform 0.2s, color 0.2s;
-        display: inline-block;
+           display: flex;
+        align-items: center;
+        gap: 7px;
       }
 
       a:hover,
       a:hover i,
       a i:hover {
         transform: scale(1.05);
-        color: whitesmoke;
+        color: #cdcdcd;
       }
 
-
       img.indian-icon {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
       }
 
       .logo img,
       .footer-logo img {
-        width: 210px;
-        height: 40px;
+        width: 180px;
+        height: 45px;
         object-fit: cover;
         padding-top: 5px;
       }
 
+      i {
+        color: white;
+        font-size: 22px;
+        cursor: pointer;
+        align-items: center;
+        text-align: center;
+      }
       .content {
         margin: 40px 300px 40px 300px;
       }
@@ -413,61 +454,87 @@
 
       @media screen and (max-width: 700px) {
 
-       nav.nav1 {
-          flex-direction: row;
-          flex-wrap: wrap;
-          height: 45px;
-          padding: 2px 15px;
-          justify-content: space-between;
-        }
-
-        ul.top {
-          flex-direction: row;
-          flex-wrap: nowrap;
-          gap: 6px;
-          font-size: 11px;
-        }
-
-        ul.top li {
+        .navbar {
+          display: flex;
           flex-direction: row;
           align-items: center;
+          justify-content: space-between;
+          padding: 15px;
+          gap: 18px;
         }
 
-        nav.nav2 {
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: center;
-          line-height: 0.3;
-          padding: 5px;
-          height: 40px;
+        .logo img {
+          width: 180px;
+          height: 45px;
         }
 
-        ul.bottom {
-          flex-direction: row;
-          flex-wrap: wrap;
-          gap: 15px;
+        .location {
+          display: flex;
+          align-items: center;
+          gap: 8px;
           font-size: 12px;
-          padding: 0;
+          margin-bottom: 8px;
         }
 
-        i {
-          font-size: 15px !important;
-        }
-
-        select {
-          font-size: 12px;
-          width: 83px;
-        }
-
-        img.indian-icon {
+        .location img.indian-icon {
           width: 18px;
           height: 18px;
         }
 
-        .logo img,
-      .footer-logo img {
-          width: 140px;
-          height: 35px;
+        .search-bar {
+          display: flex;
+          width: 100%;
+          max-width: 500px;
+          margin: 15px 0;
+        }
+
+        .search-bar select {
+          width: 60px;
+          padding: 8px;
+          font-size: 14px;
+        }
+
+        .search-bar input {
+          padding: 10px;
+          font-size: 14px;
+          flex: 1;
+        }
+
+        .search-bar button {
+          padding: 10px 15px;
+        }
+        
+        .account,
+        .orders,
+        .cart {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          font-size: 12px;
+          margin-top: 10px;
+        }
+
+        .account,
+        .orders,
+        .cart {
+          margin-left: 10px;
+        }
+
+        .navbar>.account,
+        .navbar>.orders,
+        .navbar>.cart {
+          display: inline-flex;
+          margin: 10px 6px;
+        }
+
+        .navbar {
+          text-align: center;
+        }
+
+        /* Subnav horizontal scroll */
+        .subnav {
+          font-size: 12px;
+          padding: 10px;
         }
 
           .content {
@@ -617,90 +684,90 @@
           The BIG Monsoon Offer is LIVE! Get upto 50%*OFF</a>
       </marquee>
 
-      <nav class="nav1">
-        <ul class="top">
-          <li><a href="#"><i class="fa-solid fa-location-dot"></i></a></li>
-          <li>
-            <img class="indian-icon" src="https://cdn-icons-png.flaticon.com/128/9906/9906480.png" alt="India icon">
-          </li>
-          <li>
-            <select>
-              <option selected>EN - English</option>
-              <option>HI - हिंदी</option>
-              <option>TA - தமிழ்</option>
-              <option>TE - తెలుగు</option>
-              <option>MR - मराठी</option>
-              <option>BN - বাংলা</option>
-              <option>GU - ગુજરાતી</option>
-              <option>KN - ಕನ್ನಡ</option>
-              <option>ML - മലയാളം</option>
-              <option>PA - ਪੰਜਾਬੀ</option>
-            </select>
-          </li>
-        </ul>
-
+      <div class="navbar">
         <div class="logo">
-          <a href="index.html"><img src="cartzon.png" alt="Cartzon Logo"></a>
+          <a href="#"><img src="cartzon.png" alt="Cartzon Logo"></a>
         </div>
 
-        <ul class="top">
-          <li><a href="cartzon_login.html"><i class="fa-solid fa-user"></i></a></li>
-          <li><a href="#"><i class="fa-solid fa-gear"></i></a></li>
-          <li><a href="cartzon_orders.html"><i class="fa-solid fa-box"></i></a></li>
-          <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-          <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-        </ul>
-      </nav>
-      <nav class="nav2">
-        <ul class="bottom">
-          <li class="dropdown">
-            <a href="#"><i class="fa-solid fa-bars"></i><b> All</b></a>
-            <div class="dropdown-content">
-              <a href="#">Mobiles & Accessories</a>
-              <a href="#">Computers & Laptops</a>
-              <a href="#">Home & Kitchen</a>
-              <a href="#">Beauty & Personal Care</a>
-              <a href="#">Toys & Games</a>
-              <a href="#">Automotive</a>
-              <a href="#">Health & Wellness</a>
-              <a href="#">Watches</a>
-              <a href="#">Gift Cards</a>
-              <a href="#">Men's Fashion</a>
-              <a href="#">Women's Fashion</a>
-              <a href="#">Kids & Baby</a>
-              <a href="#">Footwear</a>
-              <a href="#">Jewellery</a>
-              <a href="#">Bags & Luggage</a>
-              <a href="#">Sports & Fitness</a>
-              <a href="#">Books & Stationery</a>
-              <a href="#">Grocery & Gourmet</a>
-              <a href="#">Pet Supplies</a>
-              <a href="#">Furniture</a>
-              <a href="#">Lighting & Decor</a>
-              <a href="#">Musical Instruments</a>
-              <a href="#">Industrial & Scientific</a>
-              <a href="#">Office Supplies</a>
-              <a href="#">Travel & Outdoor</a>
-              <a href="#">Cameras & Accessories</a>
-              <a href="#">TV, Audio & Video</a>
-              <a href="#">Kitchen Appliances</a>
-              <a href="#">Garden & Outdoors</a>
-              <a href="#">Handmade</a>
-            </div>
-          </li>
-          <li><a href="#">New Arrivals</a></li>
-          <li><a href="#">Fashion</a></li>
-          <li><a href="#">Electronics</a></li>
-          <li><a href="#">Books</a></li>
-          <li><a href="#">Sports</a></li>
-          <li><a href="#">Jewellery</a></li>
-          <li><a href="#">Accessories</a></li>
-          <li><a href="#">Furniture</a></li>
-          <li><a href="#">Footwear</a></li>
-          <li><a href="#">Grocery</a></li>
-          <li><a href="#">Stationery</a></li>
-        </ul>
-      </nav>
+        <div class="location">
+          <i class="fa-solid fa-location-dot icon"></i>
+          <img class="indian-icon" src="https://cdn-icons-png.flaticon.com/128/9906/9906480.png" alt="India icon">
+          <span>Deliver to<br><b style="color: white; font-weight: bold; font-size: 16px;">India</b></span>
+        </div>
+
+        <div class="search-bar">
+          <select>
+            <option>All</option>
+            <option>Fashion</option>
+            <option>Electronics</option>
+            <option>Books</option>
+          </select>
+          <input type="text" placeholder="Search Cartzon.in" />
+          <button><i class="fa fa-search"></i></button>
+        </div>
+
+        <div class="account">
+          <a href="cartzon_login.html"><i class="fa fa-user icon"></i>
+          <span>Hello, sign in<br><b>Account & Lists</b></span></a>
+        </div>
+
+        <div class="orders">
+          <a href="cartzon_orders.html"><i class="fa fa-box icon"></i>
+          <span>Returns<br><b>& Orders</b></span></a>
+        </div>
+
+        <div class="cart">
+          <a href="cartzon_cart.html"><i class="fa fa-shopping-cart icon"></i>
+          <span><b>Cart</b></span></a>
+        </div>
+      </div>
+
+      <div class="subnav">
+  <div class="dropdown">
+    <a style="display: flex; align-items: center; gap: 5px" href="#">
+      <i class="fa fa-bars"></i> All
+    </a>
+    <div class="dropdown-content">
+      <a href="#">Mobiles & Accessories</a>
+      <a href="#">Computers & Laptops</a>
+      <a href="#">Home & Kitchen</a>
+      <a href="#">Beauty & Personal Care</a>
+      <a href="#">Toys & Games</a>
+      <a href="#">Automotive</a>
+      <a href="#">Health & Wellness</a>
+      <a href="#">Watches</a>
+      <a href="#">Gift Cards</a>
+      <a href="#">Men's Fashion</a>
+      <a href="#">Women's Fashion</a>
+      <a href="#">Kids & Baby</a>
+      <a href="#">Footwear</a>
+      <a href="#">Jewellery</a>
+      <a href="#">Bags & Luggage</a>
+      <a href="#">Sports & Fitness</a>
+      <a href="#">Books & Stationery</a>
+      <a href="#">Grocery & Gourmet</a>
+      <a href="#">Pet Supplies</a>
+      <a href="#">Furniture</a>
+      <a href="#">Lighting & Decor</a>
+      <a href="#">Musical Instruments</a>
+      <a href="#">Industrial & Scientific</a>
+      <a href="#">Office Supplies</a>
+      <a href="#">Travel & Outdoor</a>
+      <a href="#">Cameras & Accessories</a>
+      <a href="#">TV, Audio & Video</a>
+      <a href="#">Kitchen Appliances</a>
+      <a href="#">Garden & Outdoors</a>
+      <a href="#">Handmade</a>
+    </div>
+  </div>
+  <a href="#">Today's Deals</a>
+  <a href="#">Customer Service</a>
+  <a href="#">Gift Cards</a>
+  <a href="#">Sell</a>
+  <a href="#">Cartzon Pay</a>
+  <a href="#">Buy Again</a>
+  <a href="#">Cartzon Basics</a>
+</div>
     </header>
     <div class="content">
       <div class="main-header">
@@ -786,22 +853,18 @@
       </table>
 
       <div style="text-align: center; font-family: Arial, sans-serif; margin-top: 30px;">
-        <h4>Our Largest Store At Your Fingertips</h4>
-        <div style="margin-top: 15px;">
-          <a href="#" target="_blank" style="margin: 5px;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" style="height: 35px;">
-          </a>
-          <a href="https://www.apple.com/in/app-store/" target="_blank" style="margin: 5px;">
-            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style="height: 35px;">
-          </a>
-        </div>
-      </div>
+  <h4>Our Largest Store At Your Fingertips</h4>
+  <div class="store-buttons">
+    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" style="height: 35px;"></a>
+    <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style="height: 35px;"></a>
+  </div>
+</div>
 
       <hr>
 
-      <div class="footer-logo">
-        <a href="index.html"><img src="cartzon.png" alt="Cartzon Logo"></a>
-      </div>
+<div class="footer-logo">
+  <a href="index.html"><img src="cartzon.png" alt="Cartzon Logo"></a>
+</div>
 
       <div class="footer-bottom">
         <span>
