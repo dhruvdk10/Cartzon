@@ -30,29 +30,100 @@
         border: none;
       }
 
-      nav.nav1 {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+      }
+
+      /* AMAZON-LIKE NAVBAR START */
+      .amazon-navbar {
         background-color: #1b2b3e;
-        height: 60px;
-        padding: 0px 260px;
-      }
-
-      nav.nav2 {
         display: flex;
         align-items: center;
-        justify-content: center;
-        background-color: #131a22;
-        height: 40px;
+        padding: 10px 20px;
+        color: white;
+        justify-content: space-between;
+        flex-wrap: wrap;
       }
 
-      .nav2 .dropdown {
+      .location {
+        color: #ccc;
+        font-size: 10px;
+        ;
+      }
+
+      .amazon-navbar .location,
+      .amazon-navbar .account,
+      .amazon-navbar .orders,
+      .amazon-navbar .cart {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .amazon-navbar .search-bar {
+        display: flex;
+        flex: 1;
+        margin: 0 15px;
+        max-width: 600px;
+      }
+
+      .amazon-navbar select {
+        padding: 2px;
+        width: 50px;
+        text-align: center;
+        background-color: #ccc;
+        border: none;
+        border-radius: 4px 0 0 4px;
+      }
+
+      .amazon-navbar input {
+        flex: 1;
+        padding: 10px;
+        background-color: whitesmoke;
+        border: none;
+        outline: none;
+      }
+
+      .amazon-navbar button {
+        background-color: rgb(15, 155, 225);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+      }
+
+      .amazon-navbar .icon {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+      }
+
+      .subnav {
+        background-color: #131a22;
+        padding: 10px 20px;
+        color: white;
+        font-size: 14px;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .subnav .dropdown {
         position: relative;
         display: inline-block;
       }
 
-      .nav2 .dropdown-content {
+      .subnav .dropdown-content {
         display: none;
         position: absolute;
         left: 0;
@@ -65,7 +136,7 @@
         padding: 10px 0;
       }
 
-      .nav2 .dropdown-content a {
+      .subnav .dropdown-content a {
         color: black;
         padding: 10px 20px;
         background-color: whitesmoke;
@@ -75,51 +146,29 @@
         border-radius: 0;
       }
 
-      .nav2 .dropdown-content a:hover {
+      .subnav .dropdown-content a:hover {
         background: #bdbdbd;
         color: #232323;
         transform: scale(1);
       }
 
-      .nav2 .dropdown:hover .dropdown-content {
+      .subnav .dropdown:hover .dropdown-content {
         display: block;
       }
 
-      .nav2 .dropdown:hover>a {
+      .subnav .dropdown:hover>a {
         color: #ffffff;
         border-radius: 8px 8px 0 0;
       }
 
-      li {
-        display: flex;
-        align-items: center;
-      }
-
-      ul.top {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 15px;
-        padding: 0;
-        margin: 0;
-      }
-
-      ul.bottom {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 35px;
-        padding: 0;
-        margin: 0;
-      }
-
-      select {
-        background-color: #1b2b3e;
+      .subnav a {
         color: white;
-        border: none;
-        cursor: pointer;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .subnav a:hover {
+        color: #ddd;
       }
 
       a {
@@ -143,14 +192,14 @@
       }
 
       img.indian-icon {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
       }
 
       .logo img,
       .footer-logo img {
-        width: 210px;
-        height: 40px;
+        width: 180px;
+        height: 45px;
         object-fit: cover;
         padding-top: 5px;
       }
@@ -159,16 +208,18 @@
         color: white;
         font-size: 22px;
         cursor: pointer;
+        align-items: center;
+        text-align: center;
       }
 
       .sale h1,
-.sale p {
-  margin: 0;
-  padding: 0;
-}
+      .sale p {
+        margin: 0;
+        padding: 0;
+      }
 
       .banner {
-  background-image: url("https://images.unsplash.com/photo-1518655048521-f130df041f66?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-image: url("https://images.unsplash.com/photo-1518655048521-f130df041f66?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
         width: 100%;
         height: 800px;
         position: relative;
@@ -236,15 +287,16 @@
         padding: 20px;
         width: 300px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05),
-            0 8px 16px rgba(0, 0, 0, 0.08);
-        border-radius: 12px;;
+          0 8px 16px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        ;
         margin-bottom: 20px;
       }
 
       .product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1), 0 12px 30px rgba(0, 0, 0, 0.08);
-}
+        transform: translateY(-4px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1), 0 12px 30px rgba(0, 0, 0, 0.08);
+      }
 
       .product-card img {
         width: 100%;
@@ -318,14 +370,14 @@
         margin-top: 10px;
       }
 
-      .slogan{
+      .slogan {
         text-align: center;
         margin: 80px 0;
         font-size: 30px;
         font-family: 'Trebuchet MS', sans-serif;
         color: #232f3e;
       }
-        
+
 
       footer {
         background-color: #1b2b3e;
@@ -388,133 +440,139 @@
       }
 
       @media (max-width: 700px) {
-        nav.nav1 {
-          flex-direction: row;
-          flex-wrap: wrap;
-          height: 45px;
-          padding: 2px 15px;
-          justify-content: space-between;
-        }
 
-        ul.top {
+        /* Amazon Navbar Mobile */
+        .amazon-navbar {
+          display: flex;
           flex-direction: row;
-          flex-wrap: nowrap;
-          gap: 6px;
-          font-size: 11px;
-        }
-
-        ul.top li {
-          flex-direction: row;
+          /* Stack everything vertically */
           align-items: center;
+          justify-content: space-between;
+          padding: 15px;
+          gap: 18px;
+          /* Adds consistent gap between sections */
         }
 
-        i {
-          font-size: 15px !important;
+        /* Logo */
+        .logo img {
+          width: 180px;
+          height: 45px;
         }
 
-        select {
+        /* Location under logo */
+        .location {
+          display: flex;
+          align-items: center;
+          gap: 8px;
           font-size: 12px;
-          width: 83px;
+          margin-bottom: 8px;
         }
 
-        img.indian-icon {
+        .location img.indian-icon {
           width: 18px;
           height: 18px;
         }
 
-        .logo img,
-      .footer-logo img {
-          width: 140px;
-          height: 35px;
+        /* Search Bar Full Width */
+        .search-bar {
+          display: flex;
+          width: 100%;
+          max-width: 500px;
+          margin: 15px 0;
+          /* gap above and below */
         }
 
-        nav.nav2 {
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: center;
-          line-height: 0.3;
-          padding: 5px;
-          height: 40px;
+        .search-bar select {
+          width: 60px;
+          padding: 8px;
+          font-size: 14px;
         }
 
-        ul.bottom {
+        .search-bar input {
+          padding: 10px;
+          font-size: 14px;
+          flex: 1;
+        }
+
+        .search-bar button {
+          padding: 10px 15px;
+        }
+
+        /* Icons Row */
+        .account,
+        .orders,
+        .cart {
+          display: flex;
           flex-direction: row;
-          flex-wrap: wrap;
-          gap: 15px;
+          align-items: center;
           font-size: 12px;
-          padding: 0;
+          margin-top: 10px;
         }
 
+        /* Align icons horizontally */
+        .account,
+        .orders,
+        .cart {
+          margin-left: 10px;
+        }
+
+        .amazon-navbar>.account,
+        .amazon-navbar>.orders,
+        .amazon-navbar>.cart {
+          display: inline-flex;
+          margin: 10px 6px;
+        }
+
+        /* Icons in one row */
+        .amazon-navbar {
+          text-align: center;
+        }
+
+        /* Subnav horizontal scroll */
+        .subnav {
+          font-size: 12px;
+          padding: 10px;
+        }
+
+        /* Banner adjustments */
         .banner {
-          height: 265px;
-          width: 100%;
-          object-fit: contain
-        }
-
-        .sale {
-    font-size: 16px; 
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 0 10px;
-  }
-
-  .sale h1 {
-    font-size: 18px; 
-  }
-
-  .sale p {
-    font-size: 14px;
-  }
-
-  .shop-now {
-    top: 85%; /
-    left: 50%; /
-    transform: translate(-50%, -50%);
-  }
-
-  .banner-btn {
-    font-size: 16px;
-    padding: 8px 16px;
-    border-radius: 6px;
-  }
-
-        .product-section {
-          gap: 10px;
-          padding: 5px 2px;
-        }
-
-        .product-card {
-          width: 320px;
-          height: 465px;
-        }
-
-        .product-card img {
-          width: 100%;
           height: 250px;
-          border-radius: 10px;
-          border: none;
-          object-fit: cover;
+          background-size: cover;
+          background-position: center;
         }
 
-        .product-card p {
-          font-size: 13px;
-          font-family: monospace;
-          color: black;
-          margin: 4px 0;
-        }
-
-        .slogan {
+        .sale h1 {
           font-size: 18px;
         }
 
-        h2 {
-          font-size: 1rem;
-          margin-top: 30px;
-          margin-bottom: 30px;
+        .sale p {
+          font-size: 14px;
         }
 
-        table th{
+        .banner-btn {
+          font-size: 16px;
+          padding: 8px 16px;
+          border-radius: 6px;
+        }
+
+        /* Product Section */
+        .product-card {
+          width: 90%;
+          max-width: 320px;
+        }
+
+        .product-card img {
+          height: 220px;
+        }
+
+        /* Footer */
+        table {
+          display: block;
+          overflow-x: auto;
+          white-space: nowrap;
+        }
+
+        table th {
           font-size: 11px;
           padding: 6px 25px;
         }
@@ -524,22 +582,9 @@
           padding: 6px 25px;
         }
 
-        hr {
-          margin-top: 20px;
-          height: 1px;
-          border: none;
-          background-color: rgba(255, 255, 255, 0.08);
-          margin-bottom: 0px;
-        }
-
         .footer-bottom {
           font-size: 10px;
           padding: 10px 0;
-          margin-top: 0px;
-        }
-
-        ul.social-links {
-          gap: 10px;
         }
       }
     </style>
@@ -552,94 +597,93 @@
           The BIG Monsoon Offer is LIVE! Get upto 50%*OFF</a>
       </marquee>
 
-      <nav class="nav1">
-        <ul class="top">
-          <li><a href="#"><i class="fa-solid fa-location-dot"></i></a></li>
-          <li>
-            <img class="indian-icon" src="https://cdn-icons-png.flaticon.com/128/9906/9906480.png" alt="India icon">
-          </li>
-          <li>
-            <select>
-              <option selected>EN - English</option>
-              <option>HI - हिंदी</option>
-              <option>TA - தமிழ்</option>
-              <option>TE - తెలుగు</option>
-              <option>MR - मराठी</option>
-              <option>BN - বাংলা</option>
-              <option>GU - ગુજરાતી</option>
-              <option>KN - ಕನ್ನಡ</option>
-              <option>ML - മലയാളം</option>
-              <option>PA - ਪੰਜਾਬੀ</option>
-            </select>
-          </li>
-        </ul>
-
+      <div class="amazon-navbar">
         <div class="logo">
-        <a href="index.html"><img src="cartzon.png" alt="Cartzon Logo"></a>
+          <a href="#"><img src="cartzon.png" alt="Cartzon Logo"></a>
         </div>
 
-        <ul class="top">
-          <li><a href="cartzon_login.html"><i class="fa-solid fa-user"></i></a></li>
-          <li><a href="#"><i class="fa-solid fa-gear"></i></a></li>
-          <li><a href="cartzon_orders.html"><i class="fa-solid fa-box"></i></a></li>
-          <li><a href="cartzon_cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-          <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-        </ul>
-      </nav>
+        <div class="location">
+          <i class="fa-solid fa-location-dot icon"></i>
+          <img class="indian-icon" src="https://cdn-icons-png.flaticon.com/128/9906/9906480.png" alt="India icon">
+          <span>Deliver to<br><b style="color: white; font-weight: bold; font-size: 16px;">India</b></span>
+        </div>
 
-      <nav class="nav2">
-        <ul class="bottom">
-          <li class="dropdown">
-            <a href="#"><i class="fa-solid fa-bars"></i><b> All</b></a>
-            <div class="dropdown-content">
-              <a href="#">Mobiles & Accessories</a>
-              <a href="#">Computers & Laptops</a>
-              <a href="#">Home & Kitchen</a>
-              <a href="#">Beauty & Personal Care</a>
-              <a href="#">Toys & Games</a>
-              <a href="#">Automotive</a>
-              <a href="#">Health & Wellness</a>
-              <a href="#">Watches</a>
-              <a href="#">Gift Cards</a>
-              <a href="#">Men's Fashion</a>
-              <a href="#">Women's Fashion</a>
-              <a href="#">Kids & Baby</a>
-              <a href="#">Footwear</a>
-              <a href="#">Jewellery</a>
-              <a href="#">Bags & Luggage</a>
-              <a href="#">Sports & Fitness</a>
-              <a href="#">Books & Stationery</a>
-              <a href="#">Grocery & Gourmet</a>
-              <a href="#">Pet Supplies</a>
-              <a href="#">Furniture</a>
-              <a href="#">Lighting & Decor</a>
-              <a href="#">Musical Instruments</a>
-              <a href="#">Industrial & Scientific</a>
-              <a href="#">Office Supplies</a>
-              <a href="#">Travel & Outdoor</a>
-              <a href="#">Cameras & Accessories</a>
-              <a href="#">TV, Audio & Video</a>
-              <a href="#">Kitchen Appliances</a>
-              <a href="#">Garden & Outdoors</a>
-              <a href="#">Handmade</a>
-            </div>
-          </li>
-          <li><a href="#">New Arrivals</a></li>
-          <li><a href="#">Fashion</a></li>
-          <li><a href="#">Electronics</a></li>
-          <li><a href="#">Books</a></li>
-          <li><a href="#">Sports</a></li>
-          <li><a href="#">Jewellery</a></li>
-          <li><a href="#">Accessories</a></li>
-          <li><a href="#">Furniture</a></li>
-          <li><a href="#">Footwear</a></li>
-          <li><a href="#">Grocery</a></li>
-          <li><a href="#">Stationery</a></li>
-        </ul>
-      </nav>
+        <div class="search-bar">
+          <select>
+            <option>All</option>
+            <option>Fashion</option>
+            <option>Electronics</option>
+            <option>Books</option>
+          </select>
+          <input type="text" placeholder="Search Cartzon.in" />
+          <button><i class="fa fa-search"></i></button>
+        </div>
+
+        <div class="account">
+          <a href="cartzon_login.html"><i class="fa fa-user icon"></i>
+          <span>Hello, sign in<br><b>Account & Lists</b></span></a>
+        </div>
+
+        <div class="orders">
+          <a href="cartzon_orders.html"><i class="fa fa-box icon"></i>
+          <span>Returns<br><b>& Orders</b></span></a>
+        </div>
+
+        <div class="cart">
+          <a href="cartzon_cart.html"><i class="fa fa-shopping-cart icon"></i>
+          <span><b>Cart</b></span></a>
+        </div>
+      </div>
+
+      <div class="subnav">
+  <div class="dropdown">
+    <a style="display: flex; align-items: center; gap: 5px" href="#">
+      <i class="fa fa-bars"></i> All
+    </a>
+    <div class="dropdown-content">
+      <a href="#">Mobiles & Accessories</a>
+      <a href="#">Computers & Laptops</a>
+      <a href="#">Home & Kitchen</a>
+      <a href="#">Beauty & Personal Care</a>
+      <a href="#">Toys & Games</a>
+      <a href="#">Automotive</a>
+      <a href="#">Health & Wellness</a>
+      <a href="#">Watches</a>
+      <a href="#">Gift Cards</a>
+      <a href="#">Men's Fashion</a>
+      <a href="#">Women's Fashion</a>
+      <a href="#">Kids & Baby</a>
+      <a href="#">Footwear</a>
+      <a href="#">Jewellery</a>
+      <a href="#">Bags & Luggage</a>
+      <a href="#">Sports & Fitness</a>
+      <a href="#">Books & Stationery</a>
+      <a href="#">Grocery & Gourmet</a>
+      <a href="#">Pet Supplies</a>
+      <a href="#">Furniture</a>
+      <a href="#">Lighting & Decor</a>
+      <a href="#">Musical Instruments</a>
+      <a href="#">Industrial & Scientific</a>
+      <a href="#">Office Supplies</a>
+      <a href="#">Travel & Outdoor</a>
+      <a href="#">Cameras & Accessories</a>
+      <a href="#">TV, Audio & Video</a>
+      <a href="#">Kitchen Appliances</a>
+      <a href="#">Garden & Outdoors</a>
+      <a href="#">Handmade</a>
+    </div>
+  </div>
+  <a href="#">Today's Deals</a>
+  <a href="#">Customer Service</a>
+  <a href="#">Gift Cards</a>
+  <a href="#">Sell</a>
+  <a href="#">Cartzon Pay</a>
+  <a href="#">Buy Again</a>
+  <a href="#">Cartzon Basics</a>
+</div>
     </header>
 
-   <div class="banner">
+    <div class="banner">
       <div class="sale">
         <h1>ELECTRONICS OFFER</h1>
         <p>Upto 50% OFF</p>
@@ -761,7 +805,7 @@
 
       <div class="footer-logo">
         <a href="index.html"><img src="cartzon.png" alt="Cartzon Logo"></a>
-        </div>
+      </div>
 
       <div class="footer-bottom">
         <span>
