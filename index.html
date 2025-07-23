@@ -533,17 +533,20 @@
         }
 
         /* Subnav horizontal scroll */
-        .subnav {
-        font-size: 14px;
-        padding: 10px;
-        height: 100px;
-        display: flex;
-        gap: 30px;
-        align-items: center;
-        flex-wrap: wrap;
-        line-height: 0.5;
-        }
+       .subnav {
+    font-size: 12px;
+    padding: 8px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Reduce space between items */
+    line-height: 1; /* Tighten vertical spacing */
+    justify-content: flex-start;
+  }
 
+  .subnav a {
+    padding: 2px 0; /* Less padding for compact look */
+    display: inline-block;
+  }
         /* Banner adjustments */
         .banner {
           height: 400px;
