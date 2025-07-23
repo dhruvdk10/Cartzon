@@ -446,78 +446,68 @@
       @media screen and (max-width: 700px) {
 
           .navbar {
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    gap: 18px;
+    padding: 10px;
+    gap: 15px;
   }
 
   .logo img {
-    width: 180px;
-    height: 45px;
+    width: 140px;
+    height: auto;
   }
 
   .location {
+    font-size: 12px;
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 12px;
-    margin-bottom: 8px;
+    gap: 6px;
   }
 
-  .location img.indian-icon {
-    width: 18px;
-    height: 18px;
-  }
-
-  .navbar .nav-search {
-    display: flex;
+  .nav-search {
     width: 100%;
-    max-width: 500px;
-    margin: 15px 0;
+    display: flex;
+    max-width: 95%;
+    margin: 10px 0;
   }
 
   .navbar select {
     width: 60px;
+    padding: 6px;
+    font-size: 13px;
+  }
+
+  .navbar input {
     padding: 8px;
     font-size: 14px;
   }
 
-  .navbar input {
-    padding: 10px;
-    font-size: 14px;
-    flex: 1;
+  .navbar button {
+    padding: 8px 12px;
   }
 
-  .navbar button {
-    padding: 10px 15px;
-  }
-  
   .account,
   .orders,
   .cart {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 12px;
-    margin-top: 10px;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
+    margin: 8px 0;
   }
 
-  .account,
-  .orders,
-  .cart {
-    margin-left: 10px;
+  .account a,
+  .orders a,
+  .cart a {
+    justify-content: center;
+    width: 33%;
+    text-align: center;
   }
 
-  .navbar>.account,
-  .navbar>.orders,
-  .navbar>.cart {
-    display: inline-flex;
-    margin: 10px 6px;
+  i.icon {
+    font-size: 18px;
   }
-
+}
   .navbar {
     text-align: center;
   }
