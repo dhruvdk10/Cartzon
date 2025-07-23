@@ -106,7 +106,7 @@
         align-items: center;
       }
 
-      .subnav {
+     .subnav {
         background-color: #131a22;
         padding: 10px 20px;
         color: white;
@@ -518,11 +518,20 @@
     font-size: 18px;
   }
 }
-        /* Subnav horizontal scroll */
-        .subnav {
-          font-size: 12px;
-          padding: 10px;
-        }
+       .subnav {
+    font-size: 14px;
+    padding: 15px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Reduce space between items */
+    line-height: 0.3; /* Tighten vertical spacing */
+    justify-content: space-evenly;
+  }
+
+  .subnav a {
+    padding: 2px 0; /* Less padding for compact look */
+    display: inline-block;
+  }
 
           .content {
         margin: 20px 30px 20px 30px;
