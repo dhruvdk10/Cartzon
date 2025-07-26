@@ -68,7 +68,7 @@
       }
 
       .navbar .nav-search {
-        display: block;
+        display: flex;
         flex: 1;
         margin: 0 15px;
         max-width: 600px;
@@ -81,7 +81,7 @@
         background-color: #ccc;
         border: none;
         border-radius: 4px 0 0 4px;
-      }
+      } 
 
       .navbar input {
         flex: 1;
@@ -117,7 +117,7 @@
 
       a i {
         transition: transform 0.2s, color 0.2s;
-           display: flex;
+        display: flex;
         align-items: center;
         gap: 7px;
       }
@@ -300,22 +300,22 @@
       }
 
       form .social-icons .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border: 1px solid white;
-  background-color: transparent;
-  border-radius: 50%;
-  padding: 6px;
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid white;
+        background-color: transparent;
+        border-radius: 50%;
+        padding: 6px;
+      }
 
-form .social-icons .icon:hover {
-  background-color: #5b708b;
-  border: none;
-  color: #1b2b3e;
-}
+      form .social-icons .icon:hover {
+        background-color: #5b708b;
+        border: none;
+        color: #1b2b3e;
+      }
 
       a {
         text-decoration: none;
@@ -381,13 +381,13 @@ form .social-icons .icon:hover {
         background-color: rgba(255, 255, 255, 0.08);
       }
 
-   .store-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 15px;
+      .store-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
         margin-bottom: 30px;
-}
+      }
 
       .footer-logo {
         margin: 5px 0 5px 0;
@@ -416,7 +416,7 @@ form .social-icons .icon:hover {
       }
 
       @media screen and (max-width: 700px) {
-       .navbar {
+        .navbar {
           display: flex;
           flex-direction: row;
           align-items: center;
@@ -553,32 +553,32 @@ form .social-icons .icon:hover {
           height: 42px;
         }
 
-         a {
-        text-decoration: none;
-        color: white;
-      }
+        a {
+          text-decoration: none;
+          color: white;
+        }
 
-      .divider {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+        .divider {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
 
-      .line {
-        width: 100px;
-        border: none;
-        border-top: 1px solid whitesmoke;
-        margin: 0 5px;
-      }
+        .line {
+          width: 100px;
+          border: none;
+          border-top: 1px solid whitesmoke;
+          margin: 0 5px;
+        }
 
-      .divider span {
-        color: whitesmoke;
-        font-size: 12px;
-        margin: 0 10px;
-        text-wrap: no-wrap;
-      }
+        .divider span {
+          color: whitesmoke;
+          font-size: 12px;
+          margin: 0 10px;
+          text-wrap: no-wrap;
+        }
 
-      .checkbox,
+        .checkbox,
         .links,
         .divider span,
         p {
@@ -604,7 +604,7 @@ form .social-icons .icon:hover {
         }
 
 
-        table th{
+        table th {
           font-size: 11px;
           padding: 6px 25px;
         }
@@ -628,7 +628,7 @@ form .social-icons .icon:hover {
           margin-top: 0px;
         }
 
-        h4{
+        h4 {
           font-size: 12px;
         }
 
@@ -670,17 +670,17 @@ form .social-icons .icon:hover {
 
         <div class="account">
           <a href="cartzon_login.html"><i class="fa fa-user icon"></i>
-          <span>Hello, sign in<br><b>Account & Lists</b></span></a>
+            <span>Hello, sign in<br><b>Account & Lists</b></span></a>
         </div>
 
         <div class="orders">
           <a href="cartzon_orders.html"><i class="fa fa-box icon"></i>
-          <span>Returns<br><b>& Orders</b></span></a>
+            <span>Returns<br><b>& Orders</b></span></a>
         </div>
 
         <div class="cart">
           <a href="cartzon_cart.html"><i class="fa fa-shopping-cart icon"></i>
-          <span><b>Cart</b></span></a>
+            <span><b>Cart</b></span></a>
         </div>
       </div>
     </header>
@@ -717,10 +717,10 @@ form .social-icons .icon:hover {
       </div><br><br>
 
       <p style="text-align: center;">
-  Do not have an account?</p><br>
-  <span style="float: right;">
-    <a href="#" class="links">Sign up now</a>
-  </span>
+        Do not have an account?</p><br>
+      <span style="float: right;">
+        <a href="#" class="links">Sign up now</a>
+      </span>
 
     </form>
     <footer>
@@ -763,18 +763,18 @@ form .social-icons .icon:hover {
       </table>
 
       <div style="text-align: center; font-family: Arial, sans-serif; margin-top: 30px;">
-  <h4>Our Largest Store At Your Fingertips</h4>
-  <div class="store-buttons">
-    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" style="height: 35px;"></a>
-    <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style="height: 35px;"></a>
-  </div>
-</div>
+        <h4>Our Largest Store At Your Fingertips</h4>
+        <div class="store-buttons">
+          <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" style="height: 35px;"></a>
+          <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style="height: 35px;"></a>
+        </div>
+      </div>
 
       <hr>
 
-<div class="footer-logo">
-  <a href="index.html"><img src="cartzon.png" alt="Cartzon Logo"></a>
-</div>
+      <div class="footer-logo">
+        <a href="index.html"><img src="cartzon.png" alt="Cartzon Logo"></a>
+      </div>
 
       <div class="footer-bottom">
         <span>
